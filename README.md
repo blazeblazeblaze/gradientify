@@ -9,11 +9,11 @@ Outputs an array of hexadecimal RGB colour code.
 ```
 require "gradient_maker"
 
-g_maker = GradientMaker.new({
-  from: "FF334C",
-  to:   "D8FF1A",
+g_maker = GradientMaker.new(
+  from:  "FF334C",
+  to:    "D8FF1A",
   steps: 10
-})
+)
 
 g_maker.make
 
