@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+lib = File.expand_path('../../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'gradient_maker'
+require 'cli'
+
+opts    = Cli::Parser.parse
+g_maker = GradientMaker.new(opts.to_h)
+
+# g_maker = GradientMaker.new({
+#   from: "FF334C",
+#   to:   "D8FF1A",
+#   steps: 10
+# })
+
+p g_maker.make
